@@ -2,8 +2,9 @@ FROM alpine:latest
 
 MAINTAINER "Gao Jie"
 
-RUN apk update
-RUN apk --no-cache add dnsmasq
+#RUN apk update
+#RUN apk --no-cache add dnsmasq
+RUN apk add dnsmasq
 
 COPY yhosts.txt /etc/dnsmasq.d/yhosts.txt
 COPY dnsmasq.more.conf /etc/dnsmasq.more.conf
